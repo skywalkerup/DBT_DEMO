@@ -21,9 +21,12 @@ CASE
 {% endmacro %}
 
 
+
 {% macro get_day_name(x) %}
+
 CASE 
     WHEN DAYNAME({{(x)}}) IN ('Sat', 'Sun') THEN 'WEEKEND'
     ELSE 'BUSINESSDAY'
     END
+    
 {% endmacro %}
